@@ -1,11 +1,6 @@
 package com.searcher9.client;
 
 
-//import at.wizzart.gwt.widgets.client.CodeMirror;
-//import at.wizzart.gwt.widgets.client.CodeMirrorConfiguration;
-//import at.wizzart.gwt.widgets.client.event.logical.SaveEvent;
-//import at.wizzart.gwt.widgets.client.event.logical.SaveHandler;
-
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.logical.shared.InitializeEvent;
 import com.google.gwt.event.logical.shared.InitializeHandler;

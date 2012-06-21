@@ -3,6 +3,7 @@ package com.searcher9.shared;
 import java.io.Serializable;
 
 public class User implements Serializable {
+	
 	public String uid;
 	public String firstName;
 	public String lastName;

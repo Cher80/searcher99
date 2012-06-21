@@ -7,7 +7,7 @@ import com.searcher9.shared.User;
 public interface RPCSCommunicatorAsync {
 
 	void registerNewUser(String email, String firstName, String lastName,
-			String password, AsyncCallback<ResponseHolder> callback);
+			String password, AsyncCallback<User> callback);
 	
 }
 

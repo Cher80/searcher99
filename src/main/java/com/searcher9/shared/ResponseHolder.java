@@ -3,7 +3,7 @@ package com.searcher9.shared;
 import java.io.Serializable;
 
 public class ResponseHolder implements Serializable {
-	private String responseStatus;   //ok or error
+	private String responseStatus;   //ok or smth else
 	private String responseDesription;
 	private Serializable responseData;
 	

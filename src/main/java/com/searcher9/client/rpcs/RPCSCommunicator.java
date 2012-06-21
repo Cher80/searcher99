@@ -8,6 +8,6 @@ import com.searcher9.shared.User;
 @RemoteServiceRelativePath("communicator")
 public interface RPCSCommunicator extends RemoteService {
 	
- 	ResponseHolder registerNewUser(String email, String firstName, String lastName, String password);
+ 	User registerNewUser(String email, String firstName, String lastName, String password) throws RPCSControllerExeption;
 	
 }

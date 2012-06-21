@@ -13,6 +13,7 @@ import com.google.gwt.user.client.ui.SimplePanel;
 import com.searcher9.client.ClientFactory;
 import com.searcher9.client.rpcs.RPCSCommunicator;
 import com.searcher9.client.rpcs.RPCSCommunicatorAsync;
+import com.searcher9.client.rpcs.RPCSControllerExeption;
 import com.searcher9.shared.ResponseHolder;
 import com.searcher9.shared.User;
 
@@ -24,9 +25,6 @@ public class LoginView extends Composite  {
 	    public LoginView() {
 	    	nameSpan.setInnerText("Login");
 	        viewPanel.getElement().appendChild(nameSpan);
-	        //FlowPanel panel = new FlowPanel();
-	        
-			
 			Button myButt1 = new Button("Login");
 			viewPanel.add(myButt1);
 			
@@ -35,18 +33,22 @@ public class LoginView extends Composite  {
 					RPCSCommunicatorAsync communicatorSvc = GWT.create(RPCSCommunicator.class);
 
 					// Set up the callback object.
-				    AsyncCallback<ResponseHolder> callback = new AsyncCallback<ResponseHolder>() {
+				    AsyncCallback<User> callback = new AsyncCallback<User>() {
 				    	public void onFailure(Throwable caught) {
-		    					// TODO: Do something with errors.
+				    			if (caught instanceof RPCSControllerExeption) {
+				    				nameSpan.setInnerText(((RPCSControllerExeption) caught).getErrorCode());
+					    			viewPanel.getElement().appendChild(nameSpan);
+				    	        }
+				    			
 				    		}
 
 				    	@Override
-				    	public void onSuccess(ResponseHolder result) {
+				    	public void onSuccess(User result) {
 				    		// TODO Auto-generated method stub
 				    	}
 				    };
 
-				    // Make the call to the stock price service.
+				    // Make the call
 				    communicatorSvc.registerNewUser("as","sd","da","as", callback);
 				    
 				}

@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class RPCSControllerExeption extends RuntimeException implements Serializable {
 	
+	//test
 	private String errorCode;
 	
 	public  RPCSControllerExeption() {};

@@ -3,6 +3,8 @@ package com.searcher9.shared;
 import java.io.Serializable;
 
 public class ResponseHolder implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private String responseStatus;   //ok or smth else
 	private String responseDesription;
 	private Serializable responseData;

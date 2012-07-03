@@ -19,9 +19,12 @@ import com.mongodb.MongoException;
 public class RPCSControllerImpl extends RemoteServiceServlet implements
 		RPCSCommunicator {
 
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	public User registerNewUser(String email, String firstName,
 			String lastName, String password) throws RPCSControllerExeption {
+		
 		// TODO Auto-generated method stub
 		Mongo m;
 		try {

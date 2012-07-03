@@ -3,9 +3,11 @@ package com.searcher9.client.rpcs;
 import java.io.Serializable;
 
 public class RPCSControllerExeption extends RuntimeException implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	//test
 	private String errorCode;
+	
 	
 	public  RPCSControllerExeption() {};
 	
